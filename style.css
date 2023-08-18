@@ -21,8 +21,6 @@ h1 {
 }
 
 .fish-card {
-  display: flex;
-  align-items: center;
   text-align: left;
   padding: 20px;
   border: 5px solid #062E62;
@@ -35,25 +33,21 @@ h1 {
 .fish-image {
   max-width: 300px;
   height: auto;
-  margin-right: 20px; /* Add some space between image and content */
+  margin-bottom: 10px;
 }
 
 .fish-name {
-  flex-grow: 1; /* Expand to fill available space */
   font-weight: bold;
-  text-align: center; /* Center the fish name */
   margin-bottom: 5px;
 }
 
 .order-button {
-  display: block;
+  display: inline-block; 
   background-color: #062E62;
   color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
-  text-align: center; /* Center the order button */
-  }
-  
+  margin-top: 10px; 
+}
