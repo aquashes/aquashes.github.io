@@ -17,7 +17,7 @@
     <h2>Mixed Guppy</h2>
     <p id="status_mixed"><strong><s>₹20</s> ₹15</strong></p>
     <p><strong>Offer ends in: August 31, 2023</strong></p>
-    <button class="order-button" onclick="location.href = 'https://wa.me/919061047603'"><strong>Place Order</strong></button>
+    <button class="order-button" onclick="contactUrl('mixed', 'Mixed%20Guppy')"><strong>Place Order</strong></button>
    </a>
   </li>
   <li class="card">
@@ -27,15 +27,20 @@
    <a class="card-description" href="#">
     <h2>Jet Black</h2>
     <p id="status_jetblack"><strong>₹180</strong></p><br>
-    <button class="order-button" onclick="location.href = 'https://wa.me/919061047603'"><strong>Place Order</strong></button>
+    <button class="order-button" onclick="contactUrl('jetblack', 'Jet%20Black%20Guppy')"><strong>Place Order</strong></button>
    </a>
   </li>
  </ul>
 <script>
- ["jetblack"].forEach((fish) => {
+ let fishes = ["jetblack"];
+ fishes.forEach((fish) => {
   document.getElementById("status_" + fish).innerHTML = "<strong>OUT OF STOCK</strong>";
   document.getElementById("status_" + fish).style.color = "red";
  });
+ function contactUrl(inc, fish) {
+  if (fishes.includes(inc)) return alert('You cannot place an order for ' + fish.replace(/%20/g, ' ') + ', because it is currently OUT OF SOCK. Stocks for this fish will be available soon.');
+  return location.href = 'https://wa.me/919061047603?text=My%20Name:%20<Your%20Name>%0APlace:%20<Your%20District>%0AFish:%20' + fish;
+ }
 </script>
 <script>
 window.addEventListener('load', function() {
