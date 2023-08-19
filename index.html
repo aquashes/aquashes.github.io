@@ -1,79 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aquashes - Live Fishes</title>
-  <link rel="stylesheet" href="style.css">
- </head>
- <body>
-  <h1>AQUASHES</h1>
-<ul class="card-list">
-	
-	<li class="card">
-		<a class="card-image" href="#" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTUPN6YkaTvdQEFbYLtcqKah1XXRBcPbIObA&usqp=CAU);" data-image-full="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTUPN6YkaTvdQEFbYLtcqKah1XXRBcPbIObA&usqp=CAU">
-			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTUPN6YkaTvdQEFbYLtcqKah1XXRBcPbIObA&usqp=CAU" alt="Mixed Guppy" />
-		</a>
-		<a class="card-description" href="#">
-			<h2>Mixed Guppy</h2>
-			<p id="status_mixed"><strong><s>₹20</s> ₹15</strong></p>
-			<p><strong>Offer ends in: August 31, 2023</strong></p>
-			<button class="order-button" onclick="location.href = 'https://wa.me/919061047603'"><strong>Place Order</strong></button>
-		</a>
-	</li>
-	
-	<li class="card">
-		<a class="card-image" href="#" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIpEfQmDRt9PpwCx6SWzUYSakpCH0OExrPtw&usqp=CAU);" data-image-full="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIpEfQmDRt9PpwCx6SWzUYSakpCH0OExrPtw&usqp=CAU">
-			 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIpEfQmDRt9PpwCx6SWzUYSakpCH0OExrPtw&usqp=CAU" alt="Jet Black" />
-		</a>
-		<a class="card-description" href="#">
-			<h2>Jet Black</h2>
-			<p id="status_jetblack"><strong>₹180</strong></p><br>
-			<button class="order-button" onclick="location.href = 'https://wa.me/919061047603'"><strong>Place Order</strong></button>
-		</a>
-	</li>
-	
-</ul>
- <script>
-   ["jetblack"].forEach((fish) => {
-    document.getElementById("status_" + fish).innerHTML = "<strong>OUT OF STOCK</strong>";
-    document.getElementById("status_" + fish).style.color = "red";
-   });
- </script>
- <script>
-  // This is "probably" IE9 compatible but will need some fallbacks for IE8
-// - (event listeners, forEach loop)
-
-// wait for the entire page to finish loading
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Aquashes - Live Fishes</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <h1>AQUASHES</h1>
+ <ul class="card-list">
+  <li class="card">
+   <a class="card-image" href="#" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTUPN6YkaTvdQEFbYLtcqKah1XXRBcPbIObA&usqp=CAU);" data-image-full="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTUPN6YkaTvdQEFbYLtcqKah1XXRBcPbIObA&usqp=CAU">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTUPN6YkaTvdQEFbYLtcqKah1XXRBcPbIObA&usqp=CAU" alt="Mixed Guppy" />
+   </a>
+   <a class="card-description" href="#">
+    <h2>Mixed Guppy</h2>
+    <p id="status_mixed"><strong><s>₹20</s> ₹15</strong></p>
+    <p><strong>Offer ends in: August 31, 2023</strong></p>
+    <button class="order-button" onclick="location.href = 'https://wa.me/919061047603'"><strong>Place Order</strong></button>
+   </a>
+  </li>
+  <li class="card">
+   <a class="card-image" href="#" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIpEfQmDRt9PpwCx6SWzUYSakpCH0OExrPtw&usqp=CAU);" data-image-full="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIpEfQmDRt9PpwCx6SWzUYSakpCH0OExrPtw&usqp=CAU">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIpEfQmDRt9PpwCx6SWzUYSakpCH0OExrPtw&usqp=CAU" alt="Jet Black" />
+   </a>
+   <a class="card-description" href="#">
+    <h2>Jet Black</h2>
+    <p id="status_jetblack"><strong>₹180</strong></p><br>
+    <button class="order-button" onclick="location.href = 'https://wa.me/919061047603'"><strong>Place Order</strong></button>
+   </a>
+  </li>
+ </ul>
+<script>
+ ["jetblack"].forEach((fish) => {
+  document.getElementById("status_" + fish).innerHTML = "<strong>OUT OF STOCK</strong>";
+  document.getElementById("status_" + fish).style.color = "red";
+ });
+</script>
+<script>
 window.addEventListener('load', function() {
-	
-	// setTimeout to simulate the delay from a real page load
-	setTimeout(lazyLoad, 1000);
-	
+  setTimeout(loadProducts, 1000);	
 });
 
-function lazyLoad() {
-	var card_images = document.querySelectorAll('.card-image');
-	
-	// loop over each card image
-	card_images.forEach(function(card_image) {
-		var image_url = card_image.getAttribute('data-image-full');
-		var content_image = card_image.querySelector('img');
-		
-		// change the src of the content image to load the new high res photo
-		content_image.src = image_url;
-		
-		// listen for load event when the new photo is finished loading
-
-		content_image.addEventListener('load', function() {
-			// swap out the visible background image with the new fully downloaded photo
-			card_image.style.backgroundImage = 'url(' + image_url + ')';
-			// add a class to remove the blur filter to smoothly transition the image change
-			card_image.className = card_image.className + ' is-loaded';
-		});
-		
-	});
-	
+function loadProducts() {
+ var card_images = document.querySelectorAll('.card-image');
+ card_images.forEach(function(card_image) {
+  var image_url = card_image.getAttribute('data-image-full');
+  var content_image = card_image.querySelector('img');
+  content_image.src = image_url;
+  content_image.addEventListener('load', function() {
+   card_image.style.backgroundImage = 'url(' + image_url + ')';
+   card_image.className = card_image.className + ' is-loaded';
+  });
+ });
 }
  </script>
  </body>
