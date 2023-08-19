@@ -20,17 +20,16 @@ h1 {
 	min-height: 20rem; /* layout hack */
 	background: #fff center center no-repeat;
 	background-size: cover;
-	filter: blur(3px); /* blur the lowres image */
+	filter: none;
 }
 
 .card-image > img {
 	display: block;
 	width: 100%;
-	opacity: 0; /* visually hide the img element */
 }
 
 .card-image.is-loaded {
-	filter: none; /* remove the blur on fullres image */
+	filter: none;
 	transition: filter 1s;
 }
 
