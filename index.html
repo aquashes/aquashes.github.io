@@ -16,8 +16,7 @@
 		</a>
 		<a class="card-description" href="#">
 			<h2>Mixed Guppy</h2>
-			<p>₹15</p>
-			<p id='status'></p>
+			<p id="status_mixed">₹15</p><br><br>
 			<button class="order-button" onclick="location.href = 'https://wa.me/919061047603'">Place Order</button>
 		</a>
 	</li>
@@ -28,13 +27,17 @@
 		</a>
 		<a class="card-description" href="#">
 			<h2>Jet Black</h2>
-			<p>₹180</p>
-			<p id='status'></p>
+			<p id="status_jetblack">₹180</p><br><br>
 			<button class="order-button" onclick="location.href = 'https://wa.me/919061047603'">Place Order</button>
 		</a>
 	</li>
 	
 </ul>
+ <script>
+   ["jetblack"].forEach((fish) => {
+    document.getElementById("status_" + fish).innerHTML = "OUT OF STOCK";
+   });
+ </script>
  <script>
   // This is "probably" IE9 compatible but will need some fallbacks for IE8
 // - (event listeners, forEach loop)
