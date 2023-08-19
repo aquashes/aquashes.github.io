@@ -63,6 +63,7 @@ h1 {
 
 .card-description {
 	display: block;
+	margin-bottom: 16px;
 	padding: 1em 0.5em;
 	color: #fff;
 	text-decoration: none;
@@ -80,4 +81,7 @@ h1 {
   background-color: #062E62;
   color: white;
   border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
 }
