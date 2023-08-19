@@ -25,7 +25,7 @@
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIpEfQmDRt9PpwCx6SWzUYSakpCH0OExrPtw&usqp=CAU" alt="Jet Black" />
    </a>
    <a class="card-description" href="#">
-    <h2>Jet Black</h2>
+    <h2>Jet Black Guppy</h2>
     <p id="status_jetblack"><strong>₹180</strong></p><br>
     <button class="order-button" onclick="contactUrl('jetblack', 'Jet%20Black%20Guppy')"><strong>Place Order</strong></button>
    </a>
@@ -39,7 +39,7 @@
  });
  function contactUrl(inc, fish) {
   if (fishes.includes(inc)) return alert('You cannot place an order for ' + fish.replace(/%20/g, ' ') + ', because it is currently OUT OF SOCK. Stocks for this fish will be available soon.');
-  return location.href = 'https://wa.me/919061047603?text=My%20Name:%20<Your%20Name>%0APlace:%20<Your%20District>%0AFish:%20' + fish;
+  return location.href = 'https://wa.me/919061047603?text=My%20Name:%20<Your%20Name>%0AI\'m%20from%20Place:%20<Your%20District>%0AI%20need%20Fish:%20' + fish;
  }
 </script>
 <script>
