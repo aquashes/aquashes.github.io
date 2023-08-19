@@ -75,3 +75,9 @@ h1 {
 .card-description > p {
 	margin: 0;
 }
+
+.order-button {
+  background-color: #062E62;
+  color: white;
+  border: none;
+}
