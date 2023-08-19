@@ -63,7 +63,6 @@ h1 {
 
 .card-description {
 	display: block;
-	margin-bottom: 16px;
 	padding: 1em 0.5em;
 	color: #fff;
 	text-decoration: none;
@@ -75,6 +74,7 @@ h1 {
 
 .card-description > p {
 	margin: 0;
+	margin-bottom: 30px;
 }
 
 .order-button {
