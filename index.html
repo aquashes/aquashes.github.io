@@ -62,7 +62,9 @@
    }
   }, 1000);
  }
- countdown('August 31, 2023 00:00:00', 'offer_ends_mixed', 'status_mixed', '₹ 20');
+ window.addEventListener('load', function() {
+  setTimeout(countdown('August 31, 2023 00:00:00', 'offer_ends_mixed', 'status_mixed', '₹ 20'), 1000);	
+});
 </script>
 <script>
 window.addEventListener('load', function() {
