@@ -44,7 +44,8 @@
 </script>
  <script>
  function countdown(start, offer_element, price_element, price) {
-  let countDownDate = new Date(start).getTime();
+  let cd = setInterval(function() {
+   let countDownDate = new Date(start).getTime();
    let now = new Date().getTime();
    let distance = countDownDate - now;
    let d = Math.floor(distance / (1000 * 60 * 60 * 24));
