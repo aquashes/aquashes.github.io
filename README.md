@@ -1,2 +1,2 @@
 # Link:
-- <a href="https://aquashes.github.io" target="_blank"><strong>aquashes.github.io</strong></a>
+- <a href="https://aquashes.vercel.app/" target="_blank"><strong>aquashes.vercel.app</strong></a>
